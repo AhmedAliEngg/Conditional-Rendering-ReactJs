@@ -3,7 +3,13 @@ import './App.css';
 const Item =({name,isPacked})=>{
   //Conditional Statement with ternary operator if condition is true then you can show
   <li>
-    {isPacked ? name + ' ✔' : name}
+     {isPacked ? (
+        <del>
+          {name + ' ✔'}
+        </del>
+      ) : (
+        name
+      )}
   </li>
 }
 function App() {
