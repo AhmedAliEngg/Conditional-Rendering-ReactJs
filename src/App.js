@@ -1,30 +1,28 @@
 
 import './App.css';
-const Item =({name,isPacked})=>{
-  //Conditional Statement if true condition then you can show
-  if(isPacked)
-  {
-    return <li>{name} ✔</li>
-  }
-  return <li>{name} </li>
+const Item = ({ name, isPacked }) => {
+  //Conditional Statement with operator if true condition then you can show
+  <li className="item">
+    {name} {isPacked && '✔'}
+  </li>
 }
 function App() {
   return (
     <section>
       <h1>How to set Conditional Rendering in React</h1>
       <ul>
-        <Item 
+        <Item
           isPacked={true}
           name="You Can pick item"
-          />
-          <Item 
+        />
+        <Item
           isPacked={true}
           name="Welcome to our store"
-          />
-           <Item 
+        />
+        <Item
           isPacked={false}
           name="Thank You"
-          />
+        />
       </ul>
     </section>
   );
