@@ -1,7 +1,7 @@
 
 import './App.css';
 const Item =({name,isPacked})=>{
-  //Conditional Statement if true condition then you can show
+  //Conditional Statement with null if condition is false then you can show
   if(isPacked)
   {
     return <li>{name} ✔</li>
