@@ -1,10 +1,16 @@
 
 import './App.css';
 const Item = ({ name, isPacked }) => {
-  //Conditional Statement with operator if true condition then you can show
-  <li className="item">
-    {name} {isPacked && '✔'}
-  </li>
+  //Conditional assigning JSX to variables
+  let itemContent = name;
+  if (isPacked) {
+    itemContent = name + " ✔";
+  }
+  return (
+    <li>
+      {itemContent}
+    </li>
+  )
 }
 function App() {
   return (
